@@ -1,5 +1,5 @@
 * {
-    font-family: "Single Day";
+    font-family: "Noto Serif Korean";
 }
 
 /* 전체 배경과 텍스트 스타일 지정 */
@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     justify-content: center;
     /* 수직 가운데 정렬 */
-    align-items: center;
+    /* align-items: center; */
     /* 수평 가운데 정렬 */
     min-height: 100vh;
     background-image: url('images/background.jpg');
@@ -16,6 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* 배경 이미지를 고정하여 스크롤 시 움직이지 않도록 설정 */
 }
 
 /* 태그를 숨기거나 나타나게 하는 애니메이션 효과 */
@@ -29,14 +30,18 @@ body {
     transition: opacity 0.5s linear;
 }
 
+/* 편지지 스타일 */
 #postcard {
-    position: relative;
-    width: 300px;
-    /* 적절한 너비 설정 */
-    height: 210px;
-    /* 적절한 높이 설정 */
-    margin-bottom: -240px;
+    position: absolute;
+    width: 30%;
+    /* 너비 설정 */
+    /* height: 210px; */
+    /* 높이 설정 */
+    margin-bottom: 50px;
     /* 아래에서 50px 띄우기 */
+    left: 10%;
+    bottom: 40%;
+    transform: rotate(-20deg)
 }
 
 .postcard-background {
@@ -46,14 +51,50 @@ body {
     /* 이미지가 잘리지 않도록 설정 */
 }
 
+/* 텍스트 스타일 */
 #msg-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 68%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
     /* 글자 색상 설정 */
-    font-size: 20px;
+    font-size: 12px;
     /* 글자 크기 설정 */
+}
+
+p {
+    padding-left: 10px;
+}
+
+.p-message {
+    color: black;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+.p-name {
+    color: black
+}
+
+/* 버튼 스타일 */
+#btn-container {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    /* align-items: center; */
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: brown;
 }

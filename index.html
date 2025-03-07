@@ -7,21 +7,42 @@
     <title>우리집 쭈파에 초대해요</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Single+Day&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="flip.css">
+    <script src="index.js"></script>
+    <script src="flip.js"></script>
+    <script src="share.js"></script>
+    <script src="music.js"></script>
 </head>
 
 <body>
-    <div id="postcard">
+    <div id="postcard" class="rotate-0" onclick="flipImage()">
         <img src="./images/postcard.png" class="postcard-background" />
         <!-- 앞면 -->
         <div class="face front">
             <div id="msg-container">
-                <p class="p-message">메세지가 들어갈 부분</p>
+                <p class="p-message">쭈꾸미파티에 와.</p>
                 <p class="p-name hidden"> -현진 수빈 쿠키 이브네-</p>
             </div>
         </div>
+        <!-- 뒷면 -->
+        <div class="face back">
+            <div class="photo-container">
+                <img src="./images/image.jpeg" class="photo" />
+            </div>
+        </div>
     </div>
+    <div id="btn-container">
+        <button class="btn-bgm" onclick="controlBgm()">재생</button>
+        <button onclick="renewMessage()">초대장 보기</button>
+        <button class="btn-share" onclick="shareMessage">공유</button>
+    </div>
+    <audio loop id="audio-bgm">
+        <source src="./audio/music.mp3" type="audio/mp3">
+    </audio>
 </body>
 
 </html>
