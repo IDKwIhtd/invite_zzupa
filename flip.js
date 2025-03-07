@@ -1,15 +1,15 @@
-let isFlipped = false;
+let isFlipped = true;
 
 function flipImage() {
     const postcardElement = document.getElementById('postcard');
 
     // 회전 상태에 따라 클래스 추가/제거
     if (isFlipped) {
-        postcardElement.classList.remove('rotate-360');
+        postcardElement.classList.remove('rotate-180');
         postcardElement.classList.add('rotate-0');
     } else {
-        postcardElement.classList.add('rotate-360');
         postcardElement.classList.remove('rotate-0');
+        postcardElement.classList.add('rotate-180');
     }
 
     // 상태 반전
@@ -24,5 +24,5 @@ function flipImage() {
             postcardElement.classList.remove('rotate-360', 'rotate-180');
             postcardElement.classList.add('rotate-0');
         }
-    },{ once: true }); // 한 번만 실행되도록 설정
+    }); // 한 번만 실행되도록 설정 제거
 }

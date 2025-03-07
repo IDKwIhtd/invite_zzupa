@@ -3,6 +3,8 @@
     /* 3D 효과를 위한 설정 */
     transition: transform 0.3s;
     cursor: pointer;
+    transform: rotate(-20deg);
+    /* index.css에서 옮겨옴 */
 }
 
 .face {
@@ -35,8 +37,8 @@
 
 .rotate-0 {
     overflow: hidden;
-    transform: rotateY(0deg)
-        /* 회전하지 않음 */
+    transform: rotateY(0deg) rotate(-20deg);
+    /* 회전하지 않음 */
 }
 
 /* 연하장 뒷면 이미지 스타일 */

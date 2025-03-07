@@ -41,7 +41,6 @@ body {
     /* 아래에서 50px 띄우기 */
     left: 10%;
     bottom: 40%;
-    transform: rotate(-20deg)
 }
 
 .postcard-background {
@@ -79,11 +78,13 @@ p {
 
 /* 버튼 스타일 */
 #btn-container {
-    width: 150px;
+    position: fixed;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
     /* align-items: center; */
+    right: 10px;
 }
 
 button {
