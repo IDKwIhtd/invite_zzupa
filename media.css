@@ -53,11 +53,11 @@
     /* 편지지 스타일 */
     #postcard {
         position: absolute;
-        width: 55%;
+        width: 80%;
         /* 너비 설정 */
         /* height: 210px; */
         /* 높이 설정 */
-        margin-bottom: -30px;
+        margin-bottom: -100px;
         /* 아래에서 50px 띄우기 */
         left: 5%;
         bottom: 40%;
@@ -105,6 +105,7 @@
         justify-content: center;
         /* align-items: center; */
         right: 10px;
+        top: 700px;
     }
 
     button {
@@ -119,3 +120,4 @@
         cursor: pointer;
         background-color: brown;
     }
+}
