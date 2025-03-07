@@ -37,15 +37,27 @@
     }
 
     #btn-container {
-        width: 300px;
+        width: relative;
+    }
+
+    #msg-container {
+        position: absolute;
+        top: 48%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        /* 글자 색상 설정 */
+        font-size: 5px;
+        /* 글자 크기 설정 */
     }
 
     .p-message {
-        font-size: 15px;
+        color: black;
+        margin-top: -10px;
+        margin-left: -20px;
     }
 
     .p-name {
-        font-size: 13px;
-        padding-right: 30px;
+        position: relative;
     }
 }
